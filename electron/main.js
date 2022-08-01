@@ -17,20 +17,6 @@ const createWindow = () => {
     );
 }
 
-// async function createWindow() {
-//     win = new BrowserWindow({
-//         webPreferences: {
-//             nodeIntegration: false,
-//             contextIsolation: true,
-//             preload: path.resolve(path.join(__dirname, '../public/preload.ts')),
-//         },
-//     });
-// }
-
-// const { contextBridge, ipcRenderer } = require("electron");
-// contextBridge.exposeInMainWorld("darkMode", {
-//     a: () => { alert(2);}
-// });
 
 
 app.whenReady().then(() => {
