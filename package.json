@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "electron": "wait-on tcp:5173 && cross-env NODE_ENV=development electron .",
+    "electron": "wait-on tcp:3000 && cross-env NODE_ENV=development electron .",
     "start": "electron .",
     "node": "cross-env NODE_ENV=prod node server/src/app.js"
   },

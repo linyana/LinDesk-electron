@@ -19,7 +19,8 @@ import HelloWorld from "./components/HelloWorld.vue";
 <script>
 import axios from "axios";
 
-axios.get("api/data").then(
+const target = 'https://www.baidu.com'
+axios.post("api/search",'target='+target).then(
     (response) => {
         //访问成功时调用，response.data代表返回成功时的数据
         console.log(response.data);

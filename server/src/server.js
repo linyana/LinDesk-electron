@@ -1,5 +1,7 @@
 const express = require('express');
 const http = require('http');
+const open = require('open');
+
 
 class ExpressServer {
     constructor (){
@@ -14,15 +16,10 @@ class ExpressServer {
             next();
         });
         this.server = http.createServer(this.app);
-        this.app.get('/data',function(req,res){
-            let result={
-                data:{
-                    "data1":"数据一",
-                    "data2":"数据二",
-                    "data3":"数据三"
-                }
-            }
-            res.send(result)
+        //使用中间件
+        this.app.use(express.urlencoded({ extended: true }))
+        this.app.post('/search',(req,res)=>{
+            open(req.body.target)
         })
     }
 

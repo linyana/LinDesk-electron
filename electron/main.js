@@ -13,7 +13,7 @@ const createWindow = () => {
         },
     })
     win.loadURL(
-        "http://localhost:5173/"
+        "http://localhost:3000/"
     );
 }
 
