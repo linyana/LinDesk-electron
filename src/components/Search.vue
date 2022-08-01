@@ -5,7 +5,7 @@
             <option value="https://github.com/search?q=">github</option>
         </select>
         <br />
-        <input type="text" @keydown.enter="toFathertarget()" v-model="search_content" />
+        <input type="text" @keydown.enter="Search()" v-model="search_content" />
     </div>
 </template>
 
@@ -25,13 +25,11 @@ export default {
         search_content: {
             handler() {
                 this.target = this.search_target + this.search_content;
-                console.log(this.target);
             },
         },
     },
     methods: {
-        toFathertarget() {
-            // context.emit("target", `"api/search,target=" + ${this.target}`);
+        Search() {
             axios.post("api/search", "target=" + this.target).then(
                 (response) => {
                     //访问成功时调用，response.data代表返回成功时的数据
