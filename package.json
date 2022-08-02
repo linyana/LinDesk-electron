@@ -16,17 +16,18 @@
     "electron:server": "concurrently -k \"npm run dev\" \"npm run node\""
   },
   "dependencies": {
+    "element-plus": "^2.2.12",
     "vue": "^3.2.37"
   },
-  "build":{
+  "build": {
     "files": [
       "dist/**/*",
       "electron/**/*"
     ],
-    "directories":{
+    "directories": {
       "buildResources": "assets",
       "output": "dist_electron"
-    } 
+    }
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.0",

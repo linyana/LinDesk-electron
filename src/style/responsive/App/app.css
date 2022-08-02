@@ -1,0 +1,49 @@
+/* 标准pc */
+#App {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 30px;
+}
+
+.nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 230px;
+    height: 100%;
+}
+
+.page {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 230px);
+    height: 100%;
+}
+
+/* ipad */
+@media only screen and (max-width: 1200px) {
+    #App {
+        width: 1000px;
+        left: calc(50% - 500px);
+    }
+
+    .nav {
+        width: 70px;
+    }
+
+    .page {
+        width: calc(100% - 70px);
+    }
+}
+
+/* 手机端 */
+@media only screen and (max-width: 800px) {
+    #App {
+        width: 90%;
+        left: 5%;
+    }
+}
