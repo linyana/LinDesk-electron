@@ -11,17 +11,30 @@
     "preview": "vite preview",
     "electron": "wait-on tcp:3000 && cross-env NODE_ENV=development electron .",
     "start": "electron .",
-    "node": "cross-env NODE_ENV=prod node server/src/app.js"
+    "node": "cross-env NODE_ENV=prod node server/src/app.js",
+    "pack": "vite build && electron-builder",
+    "electron:server": "concurrently -k \"npm run dev\" \"npm run node\""
   },
   "dependencies": {
     "vue": "^3.2.37"
   },
+  "build":{
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "directories":{
+      "buildResources": "assets",
+      "output": "dist_electron"
+    } 
+  },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.0",
     "axios": "^0.27.2",
+    "concurrently": "^7.3.0",
     "cross-env": "^7.0.3",
     "electron": "^19.0.10",
-    "electron-builder": "^23.1.0",
+    "electron-builder": "^23.3.3",
     "vite": "^3.0.0",
     "wait-on": "^6.0.1"
   }

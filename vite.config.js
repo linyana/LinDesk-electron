@@ -5,8 +5,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   server: {
-    port: 3000,// 端口号    
-    open: true,// 自动在浏览器打开    
+    port: 3000,// 端口号      
     https: false,// 是否开启 https
     proxy: {
       '/api': {
