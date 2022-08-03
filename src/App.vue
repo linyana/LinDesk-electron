@@ -25,4 +25,26 @@ import theme from "./style/theme/dark.css";
 
 
 <style scoped>
+/* 标准pc */
+#App {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.page {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 230px);
+    height: 100%;
+}
 </style>

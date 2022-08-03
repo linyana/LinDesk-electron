@@ -1,6 +1,6 @@
 const express = require('express');
 const http = require('http');
-const open = require('open');
+const opn= require('opn');
 
 
 class ExpressServer {
@@ -19,7 +19,8 @@ class ExpressServer {
         //使用中间件
         this.app.use(express.urlencoded({ extended: true }))
         this.app.post('/search',(req,res)=>{
-            open(req.body.target)
+            let target = req.body.target.split('browser=')
+            opn(target[0], {app: target[1]}).then();
         })
     }
 
