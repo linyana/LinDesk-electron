@@ -148,6 +148,7 @@ export default {
             this.height2 = "height: 70px;";
             this.height3 = "height: 70px;";
         },
+        // 拉开下拉框
         OpenCard(index, flag) {
             if (index === "height1") {
                 this.height1 = "height: 220px";
@@ -159,11 +160,13 @@ export default {
                 this.height3 = "height: 220px";
             }
         },
+        // select框一选中
         GetValue1(item) {
             this.value1 = item.value;
             this.img1 = item.img;
             this.text1 = item.label;
         },
+        // select框二选中
         GetValue2(item) {
             this.value2 = item.value;
             this.img2 = item.img;
