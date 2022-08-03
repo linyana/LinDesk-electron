@@ -38,7 +38,7 @@ export default {};
 .logo {
     margin-left: 15%;
     width: 70%;
-    height: 112px;
+    height: 100px;
     background-image: url(../assets/images/logo.png);
     background-size: 100% 100%;
     margin-bottom: 30px;

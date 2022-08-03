@@ -7,7 +7,7 @@
   "main": "electron/main.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node server/src/app.js",
     "preview": "vite preview",
     "electron": "wait-on tcp:3000 && cross-env NODE_ENV=development electron .",
     "start": "electron .",

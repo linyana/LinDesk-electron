@@ -76,6 +76,7 @@ export default {
             text1: "百度",
             text2: "chrome",
             text3: "百度",
+            music: "",
             options1: [
                 {
                     label: "百度",
