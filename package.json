@@ -7,7 +7,7 @@
   "main": "electron/main.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node server/src/app.js",
+    "build": "concurrently -k \"npm run dev\" \"npm run node\"",
     "preview": "vite preview",
     "electron": "wait-on tcp:3000 && cross-env NODE_ENV=development electron .",
     "start": "electron .",
