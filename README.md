@@ -1,3 +1,5 @@
+# 提示
+> 仅用于启动electron，最新内容请移步[LinDesk](https://github.com/linyana/LinDesk)
 # 启动方法
 ## npm install
 > 下载依赖
